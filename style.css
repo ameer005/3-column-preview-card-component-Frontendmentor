@@ -1,0 +1,145 @@
+/* SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98 */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1;
+  min-height: 100vh;
+  color: hsl(0, 0%, 95%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.preview {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  max-width: 85rem;
+  margin: 2.4rem;
+}
+
+/* GLOBAL PROPERTIES */
+.card {
+  padding: 4.4rem;
+  /* border-radius: 7px; */
+}
+
+.icon {
+  width: 6rem;
+  margin-bottom: 3.2rem;
+}
+
+.card-heading {
+  font-family: "Big Shoulders Display", cursive;
+  font-weight: 700;
+  font-size: 3.6rem;
+  text-transform: uppercase;
+
+  margin-bottom: 2.4rem;
+}
+
+.card-text {
+  color: hsla(0, 0%, 100%, 0.75);
+  line-height: 1.6;
+  margin-bottom: 8rem;
+}
+
+.btn {
+  display: block;
+  border: none;
+  background: none;
+
+  background-color: hsl(0, 0%, 95%);
+  padding: 1.2rem 3.2rem;
+  border-radius: 25px;
+
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  cursor: pointer;
+  color: hsl(0, 0%, 95%);
+  background: none;
+  /* border: 3px solid hsl(0, 0%, 95%); */
+
+  box-shadow: inset 0 0 0 2px hsl(0, 0%, 95%);
+}
+
+/* SPECIFIC CARDS PROPERTIES */
+.card-sedans {
+  background-color: hsl(31, 77%, 52%);
+
+  border-bottom-left-radius: 7px;
+  border-top-left-radius: 7px;
+}
+
+.card-suvs {
+  background-color: hsl(184, 100%, 22%);
+}
+
+.card-Luxury {
+  background-color: hsl(179, 100%, 13%);
+  border-bottom-right-radius: 7px;
+  border-top-right-radius: 7px;
+}
+
+.btn-sedans {
+  color: hsl(31, 77%, 52%);
+}
+
+.btn-suv {
+  color: hsl(184, 100%, 22%);
+}
+
+.btn-luxury {
+  color: hsl(179, 100%, 13%);
+}
+
+/* MEDIA QUERIES */
+
+/* BELOW 770px */
+
+@media (max-width: 48em) {
+  .preview {
+    max-width: 75rem;
+  }
+
+  .card {
+    padding: 3.6rem;
+  }
+}
+
+/* BELOW 500px */
+@media (max-width: 31em) {
+  .preview {
+    grid-template-columns: 1fr;
+  }
+
+  .card-sedans {
+    border-radius: 0;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+  }
+
+  .card-Luxury {
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+  }
+}
